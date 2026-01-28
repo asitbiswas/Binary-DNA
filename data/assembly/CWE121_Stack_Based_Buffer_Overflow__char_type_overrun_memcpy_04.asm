@@ -34,92 +34,89 @@ Disassembly of section __TEXT,__text:
       6c:      	ldr	x8, [x8]
       70:      	ldr	x8, [x8]
       74:      	subs	x8, x8, x9
-      78:      	cset	w8, eq
-      7c:      	tbnz	w8, #0, 0x88 <ltmp0+0x88>
-      80:      	b	0x84 <ltmp0+0x84>
-      84:      	bl	0x84 <ltmp0+0x84>
-      88:      	ldp	x29, x30, [sp, #64]
-      8c:      	add	sp, sp, #80
-      90:      	ret
+      78:      	b.eq	0x84 <ltmp0+0x84>
+      7c:      	b	0x80 <ltmp0+0x80>
+      80:      	bl	0x80 <ltmp0+0x80>
+      84:      	ldp	x29, x30, [sp, #64]
+      88:      	add	sp, sp, #80
+      8c:      	ret
 
-0000000000000094 <_CWE121_Stack_Based_Buffer_Overflow__char_type_overrun_memcpy_04_good>:
-      94:      	stp	x29, x30, [sp, #-16]!
-      98:      	mov	x29, sp
-      9c:      	bl	0x9c <_CWE121_Stack_Based_Buffer_Overflow__char_type_overrun_memcpy_04_good+0x8>
-      a0:      	bl	0xa0 <_CWE121_Stack_Based_Buffer_Overflow__char_type_overrun_memcpy_04_good+0xc>
-      a4:      	ldp	x29, x30, [sp], #16
-      a8:      	ret
+0000000000000090 <_CWE121_Stack_Based_Buffer_Overflow__char_type_overrun_memcpy_04_good>:
+      90:      	stp	x29, x30, [sp, #-16]!
+      94:      	mov	x29, sp
+      98:      	bl	0x98 <_CWE121_Stack_Based_Buffer_Overflow__char_type_overrun_memcpy_04_good+0x8>
+      9c:      	bl	0x9c <_CWE121_Stack_Based_Buffer_Overflow__char_type_overrun_memcpy_04_good+0xc>
+      a0:      	ldp	x29, x30, [sp], #16
+      a4:      	ret
 
-00000000000000ac <_good1>:
-      ac:      	sub	sp, sp, #80
-      b0:      	stp	x29, x30, [sp, #64]
-      b4:      	add	x29, sp, #64
-      b8:      	adrp	x8, 0x0 <_good1+0xc>
+00000000000000a8 <_good1>:
+      a8:      	sub	sp, sp, #80
+      ac:      	stp	x29, x30, [sp, #64]
+      b0:      	add	x29, sp, #64
+      b4:      	adrp	x8, 0x0 <_good1+0xc>
+      b8:      	ldr	x8, [x8]
       bc:      	ldr	x8, [x8]
-      c0:      	ldr	x8, [x8]
-      c4:      	stur	x8, [x29, #-8]
-      c8:      	add	x8, sp, #16
-      cc:      	str	x8, [sp, #8]
-      d0:      	adrp	x8, 0x0 <_good1+0x24>
-      d4:      	add	x8, x8, #0
-      d8:      	str	x8, [sp]
-      dc:      	str	x8, [sp, #32]
-      e0:      	ldr	x0, [sp, #32]
-      e4:      	bl	0xe4 <_good1+0x38>
-      e8:      	ldr	x8, [sp]
-      ec:      	ldr	x0, [sp, #8]
-      f0:      	ldr	q0, [x8]
-      f4:      	str	q0, [sp, #16]
-      f8:      	strb	wzr, [sp, #31]
-      fc:      	bl	0xfc <_good1+0x50>
-     100:      	ldr	x0, [sp, #32]
-     104:      	bl	0x104 <_good1+0x58>
-     108:      	ldur	x9, [x29, #-8]
-     10c:      	adrp	x8, 0x0 <_good1+0x60>
+      c0:      	stur	x8, [x29, #-8]
+      c4:      	add	x8, sp, #16
+      c8:      	str	x8, [sp, #8]
+      cc:      	adrp	x8, 0x0 <_good1+0x24>
+      d0:      	add	x8, x8, #0
+      d4:      	str	x8, [sp]
+      d8:      	str	x8, [sp, #32]
+      dc:      	ldr	x0, [sp, #32]
+      e0:      	bl	0xe0 <_good1+0x38>
+      e4:      	ldr	x8, [sp]
+      e8:      	ldr	x0, [sp, #8]
+      ec:      	ldr	q0, [x8]
+      f0:      	str	q0, [sp, #16]
+      f4:      	strb	wzr, [sp, #31]
+      f8:      	bl	0xf8 <_good1+0x50>
+      fc:      	ldr	x0, [sp, #32]
+     100:      	bl	0x100 <_good1+0x58>
+     104:      	ldur	x9, [x29, #-8]
+     108:      	adrp	x8, 0x0 <_good1+0x60>
+     10c:      	ldr	x8, [x8]
      110:      	ldr	x8, [x8]
-     114:      	ldr	x8, [x8]
-     118:      	subs	x8, x8, x9
-     11c:      	cset	w8, eq
-     120:      	tbnz	w8, #0, 0x12c <_good1+0x80>
-     124:      	b	0x128 <_good1+0x7c>
-     128:      	bl	0x128 <_good1+0x7c>
-     12c:      	ldp	x29, x30, [sp, #64]
-     130:      	add	sp, sp, #80
-     134:      	ret
+     114:      	subs	x8, x8, x9
+     118:      	b.eq	0x124 <_good1+0x7c>
+     11c:      	b	0x120 <_good1+0x78>
+     120:      	bl	0x120 <_good1+0x78>
+     124:      	ldp	x29, x30, [sp, #64]
+     128:      	add	sp, sp, #80
+     12c:      	ret
 
-0000000000000138 <_good2>:
-     138:      	sub	sp, sp, #80
-     13c:      	stp	x29, x30, [sp, #64]
-     140:      	add	x29, sp, #64
-     144:      	adrp	x8, 0x0 <_good2+0xc>
-     148:      	ldr	x8, [x8]
-     14c:      	ldr	x8, [x8]
-     150:      	stur	x8, [x29, #-8]
-     154:      	add	x8, sp, #16
-     158:      	str	x8, [sp, #8]
-     15c:      	adrp	x8, 0x0 <_good2+0x24>
-     160:      	add	x8, x8, #0
-     164:      	str	x8, [sp]
-     168:      	str	x8, [sp, #32]
-     16c:      	ldr	x0, [sp, #32]
-     170:      	bl	0x170 <_good2+0x38>
-     174:      	ldr	x8, [sp]
-     178:      	ldr	x0, [sp, #8]
-     17c:      	ldr	q0, [x8]
-     180:      	str	q0, [sp, #16]
-     184:      	strb	wzr, [sp, #31]
-     188:      	bl	0x188 <_good2+0x50>
-     18c:      	ldr	x0, [sp, #32]
-     190:      	bl	0x190 <_good2+0x58>
-     194:      	ldur	x9, [x29, #-8]
-     198:      	adrp	x8, 0x0 <_good2+0x60>
-     19c:      	ldr	x8, [x8]
-     1a0:      	ldr	x8, [x8]
-     1a4:      	subs	x8, x8, x9
-     1a8:      	cset	w8, eq
-     1ac:      	tbnz	w8, #0, 0x1b8 <_good2+0x80>
-     1b0:      	b	0x1b4 <_good2+0x7c>
-     1b4:      	bl	0x1b4 <_good2+0x7c>
-     1b8:      	ldp	x29, x30, [sp, #64]
-     1bc:      	add	sp, sp, #80
-     1c0:      	ret
+0000000000000130 <_good2>:
+     130:      	sub	sp, sp, #80
+     134:      	stp	x29, x30, [sp, #64]
+     138:      	add	x29, sp, #64
+     13c:      	adrp	x8, 0x0 <_good2+0xc>
+     140:      	ldr	x8, [x8]
+     144:      	ldr	x8, [x8]
+     148:      	stur	x8, [x29, #-8]
+     14c:      	add	x8, sp, #16
+     150:      	str	x8, [sp, #8]
+     154:      	adrp	x8, 0x0 <_good2+0x24>
+     158:      	add	x8, x8, #0
+     15c:      	str	x8, [sp]
+     160:      	str	x8, [sp, #32]
+     164:      	ldr	x0, [sp, #32]
+     168:      	bl	0x168 <_good2+0x38>
+     16c:      	ldr	x8, [sp]
+     170:      	ldr	x0, [sp, #8]
+     174:      	ldr	q0, [x8]
+     178:      	str	q0, [sp, #16]
+     17c:      	strb	wzr, [sp, #31]
+     180:      	bl	0x180 <_good2+0x50>
+     184:      	ldr	x0, [sp, #32]
+     188:      	bl	0x188 <_good2+0x58>
+     18c:      	ldur	x9, [x29, #-8]
+     190:      	adrp	x8, 0x0 <_good2+0x60>
+     194:      	ldr	x8, [x8]
+     198:      	ldr	x8, [x8]
+     19c:      	subs	x8, x8, x9
+     1a0:      	b.eq	0x1ac <_good2+0x7c>
+     1a4:      	b	0x1a8 <_good2+0x78>
+     1a8:      	bl	0x1a8 <_good2+0x78>
+     1ac:      	ldp	x29, x30, [sp, #64]
+     1b0:      	add	sp, sp, #80
+     1b4:      	ret

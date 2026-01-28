@@ -21,210 +21,193 @@ Disassembly of section __TEXT,__text:
       38:      	ldr	x2, [x8]
       3c:      	mov	w1, #14
       40:      	bl	0x40 <ltmp0+0x40>
-      44:      	subs	x8, x0, #0
-      48:      	cset	w8, eq
-      4c:      	tbnz	w8, #0, 0x64 <ltmp0+0x64>
-      50:      	b	0x54 <ltmp0+0x54>
-      54:      	sub	x0, x29, #24
-      58:      	bl	0x58 <ltmp0+0x58>
-      5c:      	str	w0, [sp, #12]
-      60:      	b	0x74 <ltmp0+0x74>
-      64:      	adrp	x0, 0x0 <ltmp0+0x64>
-      68:      	add	x0, x0, #0
-      6c:      	bl	0x6c <ltmp0+0x6c>
-      70:      	b	0x74 <ltmp0+0x74>
-      74:      	add	x0, sp, #16
-      78:      	mov	w1, #0
-      7c:      	mov	x2, #40
-      80:      	bl	0x80 <ltmp0+0x80>
-      84:      	ldr	w8, [sp, #12]
-      88:      	subs	w8, w8, #0
-      8c:      	cset	w8, lt
-      90:      	tbnz	w8, #0, 0xec <ltmp0+0xec>
-      94:      	b	0x98 <ltmp0+0x98>
-      98:      	ldrsw	x10, [sp, #12]
-      9c:      	add	x9, sp, #16
-      a0:      	mov	w8, #1
-      a4:      	str	w8, [x9, x10, lsl #2]
-      a8:      	str	wzr, [sp, #8]
+      44:      	cbz	x0, 0x5c <ltmp0+0x5c>
+      48:      	b	0x4c <ltmp0+0x4c>
+      4c:      	sub	x0, x29, #24
+      50:      	bl	0x50 <ltmp0+0x50>
+      54:      	str	w0, [sp, #12]
+      58:      	b	0x6c <ltmp0+0x6c>
+      5c:      	adrp	x0, 0x0 <ltmp0+0x5c>
+      60:      	add	x0, x0, #0
+      64:      	bl	0x64 <ltmp0+0x64>
+      68:      	b	0x6c <ltmp0+0x6c>
+      6c:      	add	x0, sp, #16
+      70:      	mov	x2, #40
+      74:      	mov	w1, #0
+      78:      	bl	0x78 <ltmp0+0x78>
+      7c:      	ldr	w8, [sp, #12]
+      80:      	tbnz	w8, #31, 0xd8 <ltmp0+0xd8>
+      84:      	b	0x88 <ltmp0+0x88>
+      88:      	ldrsw	x10, [sp, #12]
+      8c:      	add	x9, sp, #16
+      90:      	mov	w8, #1
+      94:      	str	w8, [x9, x10, lsl #2]
+      98:      	str	wzr, [sp, #8]
+      9c:      	b	0xa0 <ltmp0+0xa0>
+      a0:      	ldr	w8, [sp, #8]
+      a4:      	subs	w8, w8, #10
+      a8:      	b.ge	0xd4 <ltmp0+0xd4>
       ac:      	b	0xb0 <ltmp0+0xb0>
-      b0:      	ldr	w8, [sp, #8]
-      b4:      	subs	w8, w8, #10
-      b8:      	cset	w8, ge
-      bc:      	tbnz	w8, #0, 0xe8 <ltmp0+0xe8>
+      b0:      	ldrsw	x9, [sp, #8]
+      b4:      	add	x8, sp, #16
+      b8:      	ldr	w0, [x8, x9, lsl #2]
+      bc:      	bl	0xbc <ltmp0+0xbc>
       c0:      	b	0xc4 <ltmp0+0xc4>
-      c4:      	ldrsw	x9, [sp, #8]
-      c8:      	add	x8, sp, #16
-      cc:      	ldr	w0, [x8, x9, lsl #2]
-      d0:      	bl	0xd0 <ltmp0+0xd0>
-      d4:      	b	0xd8 <ltmp0+0xd8>
-      d8:      	ldr	w8, [sp, #8]
-      dc:      	add	w8, w8, #1
-      e0:      	str	w8, [sp, #8]
-      e4:      	b	0xb0 <ltmp0+0xb0>
-      e8:      	b	0xfc <ltmp0+0xfc>
-      ec:      	adrp	x0, 0x0 <ltmp0+0xec>
-      f0:      	add	x0, x0, #0
-      f4:      	bl	0xf4 <ltmp0+0xf4>
-      f8:      	b	0xfc <ltmp0+0xfc>
-      fc:      	ldur	x9, [x29, #-8]
-     100:      	adrp	x8, 0x0 <ltmp0+0x100>
-     104:      	ldr	x8, [x8]
-     108:      	ldr	x8, [x8]
-     10c:      	subs	x8, x8, x9
-     110:      	cset	w8, eq
-     114:      	tbnz	w8, #0, 0x120 <ltmp0+0x120>
-     118:      	b	0x11c <ltmp0+0x11c>
-     11c:      	bl	0x11c <ltmp0+0x11c>
-     120:      	ldp	x29, x30, [sp, #80]
-     124:      	add	sp, sp, #96
+      c4:      	ldr	w8, [sp, #8]
+      c8:      	add	w8, w8, #1
+      cc:      	str	w8, [sp, #8]
+      d0:      	b	0xa0 <ltmp0+0xa0>
+      d4:      	b	0xe8 <ltmp0+0xe8>
+      d8:      	adrp	x0, 0x0 <ltmp0+0xd8>
+      dc:      	add	x0, x0, #0
+      e0:      	bl	0xe0 <ltmp0+0xe0>
+      e4:      	b	0xe8 <ltmp0+0xe8>
+      e8:      	ldur	x9, [x29, #-8]
+      ec:      	adrp	x8, 0x0 <ltmp0+0xec>
+      f0:      	ldr	x8, [x8]
+      f4:      	ldr	x8, [x8]
+      f8:      	subs	x8, x8, x9
+      fc:      	b.eq	0x108 <ltmp0+0x108>
+     100:      	b	0x104 <ltmp0+0x104>
+     104:      	bl	0x104 <ltmp0+0x104>
+     108:      	ldp	x29, x30, [sp, #80]
+     10c:      	add	sp, sp, #96
+     110:      	ret
+
+0000000000000114 <_CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_01_good>:
+     114:      	stp	x29, x30, [sp, #-16]!
+     118:      	mov	x29, sp
+     11c:      	bl	0x11c <_CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_01_good+0x8>
+     120:      	bl	0x120 <_CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_01_good+0xc>
+     124:      	ldp	x29, x30, [sp], #16
      128:      	ret
 
-000000000000012c <_CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_01_good>:
-     12c:      	stp	x29, x30, [sp, #-16]!
-     130:      	mov	x29, sp
-     134:      	bl	0x134 <_CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_01_good+0x8>
-     138:      	bl	0x138 <_CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_01_good+0xc>
-     13c:      	ldp	x29, x30, [sp], #16
-     140:      	ret
+000000000000012c <_goodG2B>:
+     12c:      	sub	sp, sp, #80
+     130:      	stp	x29, x30, [sp, #64]
+     134:      	add	x29, sp, #64
+     138:      	adrp	x8, 0x0 <_goodG2B+0xc>
+     13c:      	ldr	x8, [x8]
+     140:      	ldr	x8, [x8]
+     144:      	stur	x8, [x29, #-8]
+     148:      	mov	w8, #-1
+     14c:      	str	w8, [sp, #12]
+     150:      	mov	w8, #7
+     154:      	str	w8, [sp, #12]
+     158:      	add	x0, sp, #16
+     15c:      	mov	x2, #40
+     160:      	mov	w1, #0
+     164:      	bl	0x164 <_goodG2B+0x38>
+     168:      	ldr	w8, [sp, #12]
+     16c:      	tbnz	w8, #31, 0x1c4 <_goodG2B+0x98>
+     170:      	b	0x174 <_goodG2B+0x48>
+     174:      	ldrsw	x10, [sp, #12]
+     178:      	add	x9, sp, #16
+     17c:      	mov	w8, #1
+     180:      	str	w8, [x9, x10, lsl #2]
+     184:      	str	wzr, [sp, #8]
+     188:      	b	0x18c <_goodG2B+0x60>
+     18c:      	ldr	w8, [sp, #8]
+     190:      	subs	w8, w8, #10
+     194:      	b.ge	0x1c0 <_goodG2B+0x94>
+     198:      	b	0x19c <_goodG2B+0x70>
+     19c:      	ldrsw	x9, [sp, #8]
+     1a0:      	add	x8, sp, #16
+     1a4:      	ldr	w0, [x8, x9, lsl #2]
+     1a8:      	bl	0x1a8 <_goodG2B+0x7c>
+     1ac:      	b	0x1b0 <_goodG2B+0x84>
+     1b0:      	ldr	w8, [sp, #8]
+     1b4:      	add	w8, w8, #1
+     1b8:      	str	w8, [sp, #8]
+     1bc:      	b	0x18c <_goodG2B+0x60>
+     1c0:      	b	0x1d4 <_goodG2B+0xa8>
+     1c4:      	adrp	x0, 0x0 <_goodG2B+0x98>
+     1c8:      	add	x0, x0, #0
+     1cc:      	bl	0x1cc <_goodG2B+0xa0>
+     1d0:      	b	0x1d4 <_goodG2B+0xa8>
+     1d4:      	ldur	x9, [x29, #-8]
+     1d8:      	adrp	x8, 0x0 <_goodG2B+0xac>
+     1dc:      	ldr	x8, [x8]
+     1e0:      	ldr	x8, [x8]
+     1e4:      	subs	x8, x8, x9
+     1e8:      	b.eq	0x1f4 <_goodG2B+0xc8>
+     1ec:      	b	0x1f0 <_goodG2B+0xc4>
+     1f0:      	bl	0x1f0 <_goodG2B+0xc4>
+     1f4:      	ldp	x29, x30, [sp, #64]
+     1f8:      	add	sp, sp, #80
+     1fc:      	ret
 
-0000000000000144 <_goodG2B>:
-     144:      	sub	sp, sp, #80
-     148:      	stp	x29, x30, [sp, #64]
-     14c:      	add	x29, sp, #64
-     150:      	adrp	x8, 0x0 <_goodG2B+0xc>
-     154:      	ldr	x8, [x8]
-     158:      	ldr	x8, [x8]
-     15c:      	stur	x8, [x29, #-8]
-     160:      	mov	w8, #-1
-     164:      	str	w8, [sp, #12]
-     168:      	mov	w8, #7
-     16c:      	str	w8, [sp, #12]
-     170:      	add	x0, sp, #16
-     174:      	mov	w1, #0
-     178:      	mov	x2, #40
-     17c:      	bl	0x17c <_goodG2B+0x38>
-     180:      	ldr	w8, [sp, #12]
-     184:      	subs	w8, w8, #0
-     188:      	cset	w8, lt
-     18c:      	tbnz	w8, #0, 0x1e8 <_goodG2B+0xa4>
-     190:      	b	0x194 <_goodG2B+0x50>
-     194:      	ldrsw	x10, [sp, #12]
-     198:      	add	x9, sp, #16
-     19c:      	mov	w8, #1
-     1a0:      	str	w8, [x9, x10, lsl #2]
-     1a4:      	str	wzr, [sp, #8]
-     1a8:      	b	0x1ac <_goodG2B+0x68>
-     1ac:      	ldr	w8, [sp, #8]
-     1b0:      	subs	w8, w8, #10
-     1b4:      	cset	w8, ge
-     1b8:      	tbnz	w8, #0, 0x1e4 <_goodG2B+0xa0>
-     1bc:      	b	0x1c0 <_goodG2B+0x7c>
-     1c0:      	ldrsw	x9, [sp, #8]
-     1c4:      	add	x8, sp, #16
-     1c8:      	ldr	w0, [x8, x9, lsl #2]
-     1cc:      	bl	0x1cc <_goodG2B+0x88>
-     1d0:      	b	0x1d4 <_goodG2B+0x90>
-     1d4:      	ldr	w8, [sp, #8]
-     1d8:      	add	w8, w8, #1
-     1dc:      	str	w8, [sp, #8]
-     1e0:      	b	0x1ac <_goodG2B+0x68>
-     1e4:      	b	0x1f8 <_goodG2B+0xb4>
-     1e8:      	adrp	x0, 0x0 <_goodG2B+0xa4>
-     1ec:      	add	x0, x0, #0
-     1f0:      	bl	0x1f0 <_goodG2B+0xac>
-     1f4:      	b	0x1f8 <_goodG2B+0xb4>
-     1f8:      	ldur	x9, [x29, #-8]
-     1fc:      	adrp	x8, 0x0 <_goodG2B+0xb8>
-     200:      	ldr	x8, [x8]
-     204:      	ldr	x8, [x8]
-     208:      	subs	x8, x8, x9
-     20c:      	cset	w8, eq
-     210:      	tbnz	w8, #0, 0x21c <_goodG2B+0xd8>
-     214:      	b	0x218 <_goodG2B+0xd4>
-     218:      	bl	0x218 <_goodG2B+0xd4>
-     21c:      	ldp	x29, x30, [sp, #64]
-     220:      	add	sp, sp, #80
-     224:      	ret
-
-0000000000000228 <_goodB2G>:
-     228:      	sub	sp, sp, #96
-     22c:      	stp	x29, x30, [sp, #80]
-     230:      	add	x29, sp, #80
-     234:      	adrp	x8, 0x0 <_goodB2G+0xc>
-     238:      	ldr	x8, [x8]
-     23c:      	ldr	x8, [x8]
-     240:      	stur	x8, [x29, #-8]
-     244:      	mov	w8, #-1
-     248:      	str	w8, [sp, #12]
+0000000000000200 <_goodB2G>:
+     200:      	sub	sp, sp, #96
+     204:      	stp	x29, x30, [sp, #80]
+     208:      	add	x29, sp, #80
+     20c:      	adrp	x8, 0x0 <_goodB2G+0xc>
+     210:      	ldr	x8, [x8]
+     214:      	ldr	x8, [x8]
+     218:      	stur	x8, [x29, #-8]
+     21c:      	mov	w8, #-1
+     220:      	str	w8, [sp, #12]
+     224:      	sub	x0, x29, #24
+     228:      	stur	xzr, [x29, #-24]
+     22c:      	stur	xzr, [x0, #6]
+     230:      	adrp	x8, 0x0 <_goodB2G+0x30>
+     234:      	ldr	x8, [x8]
+     238:      	ldr	x2, [x8]
+     23c:      	mov	w1, #14
+     240:      	bl	0x240 <_goodB2G+0x40>
+     244:      	cbz	x0, 0x25c <_goodB2G+0x5c>
+     248:      	b	0x24c <_goodB2G+0x4c>
      24c:      	sub	x0, x29, #24
-     250:      	stur	xzr, [x29, #-24]
-     254:      	stur	xzr, [x0, #6]
-     258:      	adrp	x8, 0x0 <_goodB2G+0x30>
-     25c:      	ldr	x8, [x8]
-     260:      	ldr	x2, [x8]
-     264:      	mov	w1, #14
-     268:      	bl	0x268 <_goodB2G+0x40>
-     26c:      	subs	x8, x0, #0
-     270:      	cset	w8, eq
-     274:      	tbnz	w8, #0, 0x28c <_goodB2G+0x64>
-     278:      	b	0x27c <_goodB2G+0x54>
-     27c:      	sub	x0, x29, #24
-     280:      	bl	0x280 <_goodB2G+0x58>
-     284:      	str	w0, [sp, #12]
-     288:      	b	0x29c <_goodB2G+0x74>
-     28c:      	adrp	x0, 0x0 <_goodB2G+0x64>
-     290:      	add	x0, x0, #0
-     294:      	bl	0x294 <_goodB2G+0x6c>
-     298:      	b	0x29c <_goodB2G+0x74>
-     29c:      	add	x0, sp, #16
-     2a0:      	mov	w1, #0
-     2a4:      	mov	x2, #40
-     2a8:      	bl	0x2a8 <_goodB2G+0x80>
-     2ac:      	ldr	w8, [sp, #12]
-     2b0:      	subs	w8, w8, #0
-     2b4:      	cset	w8, lt
-     2b8:      	tbnz	w8, #0, 0x328 <_goodB2G+0x100>
-     2bc:      	b	0x2c0 <_goodB2G+0x98>
-     2c0:      	ldr	w8, [sp, #12]
-     2c4:      	subs	w8, w8, #10
-     2c8:      	cset	w8, ge
-     2cc:      	tbnz	w8, #0, 0x328 <_goodB2G+0x100>
-     2d0:      	b	0x2d4 <_goodB2G+0xac>
-     2d4:      	ldrsw	x10, [sp, #12]
-     2d8:      	add	x9, sp, #16
-     2dc:      	mov	w8, #1
-     2e0:      	str	w8, [x9, x10, lsl #2]
-     2e4:      	str	wzr, [sp, #8]
-     2e8:      	b	0x2ec <_goodB2G+0xc4>
-     2ec:      	ldr	w8, [sp, #8]
-     2f0:      	subs	w8, w8, #10
-     2f4:      	cset	w8, ge
-     2f8:      	tbnz	w8, #0, 0x324 <_goodB2G+0xfc>
-     2fc:      	b	0x300 <_goodB2G+0xd8>
-     300:      	ldrsw	x9, [sp, #8]
-     304:      	add	x8, sp, #16
-     308:      	ldr	w0, [x8, x9, lsl #2]
-     30c:      	bl	0x30c <_goodB2G+0xe4>
-     310:      	b	0x314 <_goodB2G+0xec>
-     314:      	ldr	w8, [sp, #8]
-     318:      	add	w8, w8, #1
-     31c:      	str	w8, [sp, #8]
-     320:      	b	0x2ec <_goodB2G+0xc4>
-     324:      	b	0x338 <_goodB2G+0x110>
-     328:      	adrp	x0, 0x0 <_goodB2G+0x100>
-     32c:      	add	x0, x0, #0
-     330:      	bl	0x330 <_goodB2G+0x108>
-     334:      	b	0x338 <_goodB2G+0x110>
-     338:      	ldur	x9, [x29, #-8]
-     33c:      	adrp	x8, 0x0 <_goodB2G+0x114>
-     340:      	ldr	x8, [x8]
-     344:      	ldr	x8, [x8]
-     348:      	subs	x8, x8, x9
-     34c:      	cset	w8, eq
-     350:      	tbnz	w8, #0, 0x35c <_goodB2G+0x134>
-     354:      	b	0x358 <_goodB2G+0x130>
-     358:      	bl	0x358 <_goodB2G+0x130>
-     35c:      	ldp	x29, x30, [sp, #80]
-     360:      	add	sp, sp, #96
-     364:      	ret
+     250:      	bl	0x250 <_goodB2G+0x50>
+     254:      	str	w0, [sp, #12]
+     258:      	b	0x26c <_goodB2G+0x6c>
+     25c:      	adrp	x0, 0x0 <_goodB2G+0x5c>
+     260:      	add	x0, x0, #0
+     264:      	bl	0x264 <_goodB2G+0x64>
+     268:      	b	0x26c <_goodB2G+0x6c>
+     26c:      	add	x0, sp, #16
+     270:      	mov	x2, #40
+     274:      	mov	w1, #0
+     278:      	bl	0x278 <_goodB2G+0x78>
+     27c:      	ldr	w8, [sp, #12]
+     280:      	tbnz	w8, #31, 0x2e8 <_goodB2G+0xe8>
+     284:      	b	0x288 <_goodB2G+0x88>
+     288:      	ldr	w8, [sp, #12]
+     28c:      	subs	w8, w8, #10
+     290:      	b.ge	0x2e8 <_goodB2G+0xe8>
+     294:      	b	0x298 <_goodB2G+0x98>
+     298:      	ldrsw	x10, [sp, #12]
+     29c:      	add	x9, sp, #16
+     2a0:      	mov	w8, #1
+     2a4:      	str	w8, [x9, x10, lsl #2]
+     2a8:      	str	wzr, [sp, #8]
+     2ac:      	b	0x2b0 <_goodB2G+0xb0>
+     2b0:      	ldr	w8, [sp, #8]
+     2b4:      	subs	w8, w8, #10
+     2b8:      	b.ge	0x2e4 <_goodB2G+0xe4>
+     2bc:      	b	0x2c0 <_goodB2G+0xc0>
+     2c0:      	ldrsw	x9, [sp, #8]
+     2c4:      	add	x8, sp, #16
+     2c8:      	ldr	w0, [x8, x9, lsl #2]
+     2cc:      	bl	0x2cc <_goodB2G+0xcc>
+     2d0:      	b	0x2d4 <_goodB2G+0xd4>
+     2d4:      	ldr	w8, [sp, #8]
+     2d8:      	add	w8, w8, #1
+     2dc:      	str	w8, [sp, #8]
+     2e0:      	b	0x2b0 <_goodB2G+0xb0>
+     2e4:      	b	0x2f8 <_goodB2G+0xf8>
+     2e8:      	adrp	x0, 0x0 <_goodB2G+0xe8>
+     2ec:      	add	x0, x0, #0
+     2f0:      	bl	0x2f0 <_goodB2G+0xf0>
+     2f4:      	b	0x2f8 <_goodB2G+0xf8>
+     2f8:      	ldur	x9, [x29, #-8]
+     2fc:      	adrp	x8, 0x0 <_goodB2G+0xfc>
+     300:      	ldr	x8, [x8]
+     304:      	ldr	x8, [x8]
+     308:      	subs	x8, x8, x9
+     30c:      	b.eq	0x318 <_goodB2G+0x118>
+     310:      	b	0x314 <_goodB2G+0x114>
+     314:      	bl	0x314 <_goodB2G+0x114>
+     318:      	ldp	x29, x30, [sp, #80]
+     31c:      	add	sp, sp, #96
+     320:      	ret
